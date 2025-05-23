@@ -6,35 +6,36 @@ export const routes: Routes = [
   },
   {
     path: 'navigate',
-    loadChildren:()=>import('../app/components/shared/navigate/navigate.component').then( m => m.NavigateComponent)
+    loadComponent:()=>import('../app/components/shared/navigate/navigate.component').then( m => m.NavigateComponent)
   },
-  {
+    {
     path: 'menu',
     loadComponent: ()=> import('./components/Bienvenida/menu/menu.component').then( m=>m.MenuComponent),
-
-    children: [
+    },
     {
         path: 'about',
-        loadChildren: () => import('./components/Bienvenida/about/about.component').then( m => m.AboutComponent)
+        loadComponent: () => import('./components/Bienvenida/about/about.component').then( m => m.AboutComponent)
     },
     {
       path: 'menu',
-      loadChildren:() => import('./components/Bienvenida/menu/menu.component').then( m => m.MenuComponent)
+      loadComponent:() => import('./components/Bienvenida/menu/menu.component').then( m => m.MenuComponent)
     },
     {
       path: 'servicio',
-      loadChildren: () => import('./components/Bienvenida/servicio/servicios.component').then(m => m.ServiciosComponent)
+      loadComponent: () => import('./components/Bienvenida/servicio/servicios.component').then(m => m.ServiciosComponent)
     },
     {
       path: 'contact',
-      loadChildren: () => import ('../app/components/Bienvenida/contact/contact.component').then(m=> m.ContactComponent)
-    }
-      ],
+      loadComponent: () => import ('../app/components/Bienvenida/contact/contact.component').then(m=> m.ContactComponent)
+    },
+    // {
+    //   path: 'servicio/:id',
+    //   loadComponent:()=> import('')
+    // }
+  {
+    path: '', pathMatch: 'full', redirectTo: 'menu'
   },
   {
-    path: '', pathMatch: 'full', redirectTo: 'home'
-  },
-  {
-    path: '**', pathMatch: 'full', redirectTo: 'home'
+    path: '**', pathMatch: 'full', redirectTo: 'menu'
   }
 ];

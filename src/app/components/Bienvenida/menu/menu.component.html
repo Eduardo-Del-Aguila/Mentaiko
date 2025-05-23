@@ -1,7 +1,43 @@
-Menu en progreso
-<div class="text-center ">
-  <p class="text-7xl">MENTAIKO</p>
-  <p class="text-5xl">Tu bienestar primero</p>
-  <p class="text-5xl"></p>
+<div class="flex flex-col text-center font-sans min-h-screen">
 
+  <div class="flex-grow">
+    <app-nav></app-nav>
+    <div>
+      <h3 class="text-5xl font-black drop-shadow-md">MENTAIKO</h3>
+      <h4 class="text-2xl font-bold -mt-2">TU BIENESTAR PRIMERO</h4>
+      <p class="max-w-xl mx-auto mt-5 text-gray-700 text-base">
+        Este es un programa de ayuda mental, te acompañaremos en tu largo camino universitario para poder poner en marcha tu mejor versión
+      </p>
+    </div>
+
+    <div class="grid-cols-2">
+      <div class="relative inline-block mt-8 mx-10">
+        <button
+        class="bg-lime-300 rounded-full border border-gray-400 px-6 py-2 font-bold text-black hover:bg-lime-400 transition-all duration-300"
+        >
+        Ordenar
+      </button>
+
+      <div class="absolute top-1 left-full transform -translate-x-2/5 -translate-y-2/5 text-sm font-handwriting right-2 p-[-2]">
+        <div class="-rotate-12 font-semibold">
+          Ordena<br />aquí
+        </div>
+        <div class="text-3xl -rotate-45 absolute -top-4 -left-12">⬅️</div>
+      </div>
+    </div>
+
+    <div class="mt-20 rotate-[-10deg] inline-block shadow-lg">
+      <div class="bg-green-950 text-white px-6 py-3 flex items-center gap-3">
+        <img
+        src="https://img.icons8.com/ios-filled/50/mental-health.png"
+        alt="mental icon"
+        class="w-6"
+        />
+        <span class="font-bold">MENTAIKO</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <app-footer></app-footer>
 </div>

@@ -1,1 +1,22 @@
-<p>servicios works!</p>
+
+<div>
+  <div>
+    <app-nav></app-nav>
+  </div>
+  <div class="flex flex-col w-full">
+    <div class="flex justify-center items-center text-4xl h-[400px] bg-gradient-to-b from-green-200 via to-white w-full pb-3">
+      <p>Nuestra variedad de servicios</p>
+    </div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-4 mx-auto max-w-5xl">
+  @for (item of misServicios; track $index) {
+    <div class="flex justify-center">
+      <a href="#" class="block w-full max-w-xs p-6 border border-gray-200 rounded-lg shadow-sm hover:border-black bg-green-200">
+        <h5 class="mb-4 text-2xl font-bold tracking-tight text-gray-900">{{item.name}}</h5>
+        <img src="assets/img/noimage.png" alt="" class="mb-4 rounded-md w-full h-auto">
+        <p class="font-normal text-gray-700">{{item.description}}</p>
+      </a>
+    </div>
+  }
+</div>
+  </div>
+</div>

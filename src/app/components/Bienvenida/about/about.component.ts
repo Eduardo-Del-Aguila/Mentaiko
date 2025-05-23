@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { NavComponent } from '../../shared/nav/nav.component';
+
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [NavComponent],
   templateUrl: './about.component.html'
 })
 export class AboutComponent {
