@@ -6,7 +6,30 @@ export const routes: Routes = [
   },
   {
     path: 'navigate',
-    loadComponent:()=>import('../app/components/shared/navigate/navigate.component').then(m=>m.NavigateComponent)
+    loadChildren:()=>import('../app/components/shared/navigate/navigate.component').then( m => m.NavigateComponent)
+  },
+  {
+    path: 'menu',
+    loadComponent: ()=> import('./components/Bienvenida/menu/menu.component').then( m=>m.MenuComponent),
+
+    children: [
+    {
+        path: 'about',
+        loadChildren: () => import('./components/Bienvenida/about/about.component').then( m => m.AboutComponent)
+    },
+    {
+      path: 'menu',
+      loadChildren:() => import('./components/Bienvenida/menu/menu.component').then( m => m.MenuComponent)
+    },
+    {
+      path: 'servicio',
+      loadChildren: () => import('./components/Bienvenida/servicio/servicios.component').then(m => m.ServiciosComponent)
+    },
+    {
+      path: 'contact',
+      loadChildren: () => import ('../app/components/Bienvenida/contact/contact.component').then(m=> m.ContactComponent)
+    }
+      ],
   },
   {
     path: '', pathMatch: 'full', redirectTo: 'home'

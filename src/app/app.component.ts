@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from "./components/home/home.component";
+import { Router, RouterOutlet, RouterLink } from '@angular/router';
 import { NavigateComponent } from "./components/shared/navigate/navigate.component";
+
 
 @Component({
   selector: 'app-root',
-  imports: [HomeComponent, NavigateComponent],
+  imports: [NavigateComponent, RouterOutlet,RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Mentaiko';
+  started = true
 }
